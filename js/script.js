@@ -18,20 +18,7 @@ const reactBar = document.querySelector(".bar-react");
 
 var t1 = new TimelineLite();
 
-//add a from() tween at the beginning of the timline
-tl.from(htmlBar, 0.5, { left: 100, opacity: 0 });
-
-//add another tween immediately after
-tl.from(cssBar, 0.5, { left: -100, opacity: 0 });
-
-//use position parameter "+=0.5" to schedule next tween 0.5 seconds after previous tweens end
-tl.from(jsBar, 0.5, { scale: 0.5, autoAlpha: 0 }, "+=0.5");
-
-//use position parameter "-=0.5" to schedule next tween 0.25 seconds before previous tweens end.
-//great for overlapping
-tl.from(reactBar, 0.5, { left: 100, autoAlpha: 0 }, "-=0.25");
-
-/* t1.fromTo(
+t1.fromTo(
   htmlBar,
   0.75,
   { width: `calc(0% -6px)` },
@@ -55,7 +42,7 @@ t1.fromTo(
   { width: `calc(0% -6px)` },
   { width: `calc(70% -6px)`, ease: Power4.easeOut }
 );
- */
+
 const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
   triggerElement: ".skills",
