@@ -253,6 +253,7 @@ div[class^="tag-"] {
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
     width: 120px;
     height: 30px;
+    float: left;
     background-color: #1785a7;
     margin-right: 30px;
 }
@@ -265,28 +266,61 @@ div[class^="tag-"] p {
     padding-top: 3px;
 }
 
-.progressbar {
-    position: relative;
-    background: #48cfad;
-    width: 600px;
-    height: 20px;
-    border: 2px solid #48cfad;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    margin-top: 7px;
+.skills-type {
+    margin: 60px auto;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-.percentage {
+.skills-type li {
+    margin: 20px 0;
+}
+
+.progressbar {
+    background: #353b48;
+    width: 500px;
+    display: block;
+    margin: 5px 0 0 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    height: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 2px gray;   
+}
+
+.progressbar span{
+    height: 15px;
+    float: left;
+    background: #1785a7;
+}
+
+.bar-html {
+    width: 90%;
+}
+
+.bar-js {
+    width: 70%;
+}
+
+.bar-css {
+    width: 70%;
+}
+
+.bar-react {
+    width: 60%;
+}
+
+/*.percentage {
     position: relative;
     color: #fff;
     margin-left: 10px;
     margin-top: 5px;
 }
-
-div[class^="bar-"] {
+*/
+/*div[class^="bar-"] {
     position: absolute;
     background-color: #48cfad;
     height: 10px;
@@ -297,13 +331,14 @@ div[class^="bar-"] {
     -o-border-radius: 20px;
     margin: 2.7px;
 }
-
-.bar-html,
+*/
+/*.bar-html,
 .bar-css,
 .bar-js,
 .bar-react {
     width: calc(0 -6px);
 }
+*/
 
 .work-category button {
     text-transform: capitalize;
